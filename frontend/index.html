@@ -6,6 +6,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Chat | ONLINE</title>
 </head>
@@ -19,22 +22,52 @@
 
         <section class="login">
             <h2>Login</h2>
-            <form class="login__form">
-                <input type="text" class="login__input" placeholder="Seu nome" required />
-                <button type="submit" class="login__button" style="--cor1: #4d4d4d; --cor2: #fff ">
-                    Entrar
-                </button>
+            <form action="#" class="login__form">
+
+                <div class="email-form">
+                    <input type="email" class="login__input" placeholder="Email" required />
+                </div>
+
+                <div class="password-form">
+                    <input type="password" class="login__input" placeholder="Senha" required />
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="form-link">
+                    <a href="#" class="forgot-pass">Esqueceu a senha?</a>
+                </div>
+
+                <div class="login-button">
+                    <button type="submit" class="login__button" style="--cor1:#016DCB; --cor2:#016DCB">
+                        Entrar
+                    </button>
+                </div>
+
             </form>
+
+            <div class="form-link">
+                <span>Não possui uma conta? <a href="#" class="link signup-link">Inscreva-se</a></span>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="login-facebook">
+                <a href="#" class="field facebook">
+                    <img src="images/facebook.png" alt="">
+                    <span>Entrar com Facebook</span>
+                </a>
+            </div>
+
+            <div class="login-google">
+                <a href="images/google.png" class="field google">
+                    <img src="images/google.png" alt="" class="google-img">
+                    <span>Entrar com Google</span>
+                </a>
+            </div>
         </section>
 
         <section class="chat">
             <section class="chat__messages">
-                <!-- <div class="message--self">Hello, World!</div>
-
-                <div class="message--other">
-                    <span class="message--sender">Manual do Dev</span>
-                    Olá, Mundo!
-                </div> -->
             </section>
 
             <form class="chat__form">
@@ -44,9 +77,9 @@
                 </button>
             </form>
         </section>
-
     </section>
 
     <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
 </body>
 </html>

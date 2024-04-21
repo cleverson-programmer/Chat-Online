@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -12,7 +12,7 @@
 }
 
 body {
-    background: url("../images/background.png");
+    background-color:#d6d6d6;
     color: #f2f2f2;
     display:flex;
     justify-content:center;
@@ -24,9 +24,11 @@ body {
 .rail {
     width:80px;
     height:30px;
-    background-color: #4d4d4d;
+    background-color:#f2f2f2;
     border-radius: 30px;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    right:10px;
     cursor: pointer;
 }
 
@@ -51,7 +53,7 @@ body {
 }
 
 body.dark{
-    background: url("../images/background_Light.jpg");
+    background:#000000;
 }
 
 .login.dark {
@@ -69,24 +71,27 @@ body.dark{
 }
 
 .login {
+    position: absolute;
+    max-width: 430px;
     width: 100%;
-    max-width: 330px;
-    background-color: #212121;
-    border-radius: 5px;
-    padding: 20px;
+    height: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #FFF;
 }
 
 .login > h2 {
     text-align: center;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
+    color:black;
 }
 
 .login__form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
 }
 
 .login__input {
@@ -94,14 +99,62 @@ body.dark{
     padding: 15px;
     font-size: 0.85rem;
     font-weight: 600;
-    background-color: #121212;
-    color: #f2f2f2;
+    border: 1px solid rgb(190, 187, 187);
+    color: #979797;
     outline: none;
     border-radius: 5px;
+    width:100%;
 }
 
 .login__input:focus {
     outline: 2px solid #f2f2f2;
+}
+
+.eye-icon{
+    position: absolute;
+    top: 32%;
+    right: 32px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.form-link{
+    display: flex;
+    justify-content: center;
+}
+
+.form-link a{
+    text-decoration: none;
+    color: #0171D3;
+    font-weight: 600;
+}
+
+.form-link span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #232836;
+    margin-top: 10px;
+}
+
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+.line::before{
+    content: 'Ou';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #8b8b8b;
+    padding: 0 15px;
 }
 
 /*Custom login button*/
@@ -111,19 +164,78 @@ body.dark{
     border-radius: 5px;
     font-size: 0.85rem;
     font-weight: 700;
-    background-color: #ddd;
+    background-color:#016DCB;
     cursor: pointer;
-    color: #121212;
+    color: white;
     transition: .5s;
     box-shadow:1px;
+    width: 100%;
 }
 
 .login__button:hover {
-    background-color: #fff;
-    border-radius: 20px;
+    background-color:#016DCB;
     background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
     content:'';
     opacity: 1;
+}
+
+.login-facebook,
+.login-google {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-facebook a,
+.login-google a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.login-facebook a{
+    color: white;
+}
+
+.login-facebook{
+    color: #fff;
+    background-color: #4267b2;
+    width:100%;
+}
+
+.login-facebook a img{
+    height: 25px;
+    width: 32x;
+    color: #0171d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 40px;
+    bottom: 122px;
+}
+
+.login-google{
+    border: 1px solid #CACACA;
+}
+a.google span{
+    font-weight: 600;
+    opacity: 0.6;
+    color: #232836;
+}
+
+.login-google a img{
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 40px;
 }
 
 /*Final custom login buttom*/
@@ -189,7 +301,7 @@ body.dark{
 }
 
 .message--self {
-    background-color: #f2f2f2;
+    background-color:gray;
     color: #121212;
     border-radius: 10px 10px 0 10px;
     align-self: flex-end;
