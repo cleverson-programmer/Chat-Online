@@ -5,59 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/navbar.css">
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Chat | ONLINE</title>
 </head>
 <body>
-
-    <div class="rail" id="rail">
-        <div class="indicator"></div>
-    </div>
     
     <section class="container">
+
+        <div class="rail" id="rail">
+            <div class="indicator"></div>
+        </div>
 
         <section class="login">
             <h2>Login</h2>
             <form action="#" class="login__form">
-
+        
                 <div class="email-form">
                     <input type="email" class="login__input" placeholder="Email" required />
                 </div>
-
+        
                 <div class="password-form">
                     <input type="password" class="login__input" placeholder="Senha" required />
-                    <i class='bx bx-hide eye-icon'></i>
+                        <i class='bx bx-hide eye-icon'></i>
                 </div>
-
+        
                 <div class="form-link">
                     <a href="#" class="forgot-pass">Esqueceu a senha?</a>
                 </div>
-
+        
                 <div class="login-button">
-                    <button type="submit" class="login__button" style="--cor1:#016DCB; --cor2:#016DCB">
+                    <button id="enter" type="submit" class="login__button" style="--cor1:#016DCB; --cor2:#016DCB">
                         Entrar
                     </button>
                 </div>
-
+        
             </form>
-
+        
             <div class="form-link">
                 <span>Não possui uma conta? <a href="#" class="link signup-link">Inscreva-se</a></span>
             </div>
-
+        
             <div class="line"></div>
-
+        
             <div class="login-facebook">
                 <a href="#" class="field facebook">
                     <img src="images/facebook.png" alt="">
                     <span>Entrar com Facebook</span>
                 </a>
             </div>
-
+        
             <div class="login-google">
                 <a href="images/google.png" class="field google">
                     <img src="images/google.png" alt="" class="google-img">
@@ -67,6 +68,102 @@
         </section>
 
         <section class="chat">
+
+            <nav class="sidebar close">
+                <header>
+                    <div class="image-text">
+                        <span class="image">
+                            <img src="images/logo-endless-chat.png" alt="">
+                        </span>
+        
+                        <div class="text logo-text">
+                            <span class="name">Endless Chat</span>
+                            <span class="profession">Seu chat online</span>
+                        </div>
+                    </div>
+        
+                    <i class='bx bx-chevron-right toggle'></i>
+                </header>
+        
+                <div class="menu-bar">
+                    <div class="menu">
+        
+                        <li class="search-box">
+                            <i class='bx bx-search icon'></i>
+                            <input type="text" placeholder="Pesquisar...">
+                        </li>
+        
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-home-alt icon' ></i>
+                                    <span class="text nav-text">Painel</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                                    <span class="text nav-text">Análises</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-bell icon'></i>
+                                    <span class="text nav-text">Notificações</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-pie-chart-alt icon' ></i>
+                                    <span class="text nav-text">Tempo de uso</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-heart icon' ></i>
+                                    <span class="text nav-text">Curtidas</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-wallet icon' ></i>
+                                    <span class="text nav-text">Carteira</span>
+                                </a>
+                            </li>
+        
+                        </ul>
+                    </div>
+        
+                    <div class="bottom-content">
+                        <li class="">
+                            <a href="#">
+                                <i class='bx bx-log-out icon' ></i>
+                                <span class="text nav-text">Sair</span>
+                            </a>
+                        </li>
+        
+                        <li class="mode">
+                            <div class="sun-moon">
+                                <i class='bx bx-moon icon moon'></i>
+                                <i class='bx bx-sun icon sun'></i>
+                            </div>
+                            <span class="mode-text text">Plano de fund0</span>
+        
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+                        
+                    </div>
+                </div>
+        
+            </nav>
+
             <section class="chat__messages">
             </section>
 
@@ -77,9 +174,8 @@
                 </button>
             </form>
         </section>
-    </section>
 
+    </section>
     <script src="./js/script.js"></script>
-    <script src="./js/navbar.js"></script>
 </body>
 </html>

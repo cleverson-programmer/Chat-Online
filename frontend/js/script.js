@@ -9,14 +9,6 @@ const chatForm = chat.querySelector(".chat__form")
 const chatInput = chat.querySelector(".chat__input")
 const chatMessages = chat.querySelector(".chat__messages")
 
-//DARK MOD elements
-const rail = document.getElementById('rail')
-const body = document.querySelector('body')
-rail.addEventListener('click', () => {
-    rail.classList.toggle('dark')
-    body.classList.toggle('dark')
-})
-
 const colors = [
     "cadetblue",
     "darkgoldenrod",
@@ -112,3 +104,39 @@ const sendMessage = (event) => {
 
 loginForm.addEventListener("submit", handleLogin)
 chatForm.addEventListener("submit", sendMessage)
+
+/* Sidebar script */
+
+const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Modo claro";
+    }else{
+        modeText.innerText = "Modo escuro";
+        
+    }
+});
+
+//DARK MOD elements
+const rail = document.getElementById('rail')
+rail.addEventListener('click', () => {
+    rail.classList.toggle('dark')
+    body.classList.toggle('dark')
+})
